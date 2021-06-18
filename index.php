@@ -1,13 +1,13 @@
 <?php
 
 const TEST_CONSTANTA = 'asd';
-$user_name = "Igor";
+$userName = "Igor";
 
 function showSomething()
 {
-    RETURN 'SOMETHING';
+    return 'SOMETHING';
 }
 
-if (1===1) {
+if (1 == 1) {
     echo 'hi';
 }
