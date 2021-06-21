@@ -51,19 +51,24 @@ function task2(string $operation, ...$numbers)
 
 function task3($cols, $rows)
 {
-	if (is_int($cols) && is_int($rows)) {
-		echo "<table>";
-		for ($i = 1; $i < $cols + 1; $i++) {
-			echo "<tr>";
-			for ($j = 1; $j < $rows + 1; $j++) {
-				$number = $j * $i;
-				echo "<td> {$number} </td>";
-			}
-			echo "</tr>";
-		}
-
-		echo "</table>";
-	} else {
-		echo "Введите целое число";
+	if (!is_int($cols) || !is_int($rows)) {
+		trigger_error('Введите целое число');
+		return false;
 	}
+	if( $cols < 0 || $rows < 0) {
+		trigger_error("Введите положительное значение");
+		return false;
+	}
+	echo "<table>";
+	for ($i = 1; $i < $cols + 1; $i++) {
+		echo "<tr>";
+		for ($j = 1; $j < $rows + 1; $j++) {
+			$number = $j * $i;
+			echo "<td> {$number} </td>";
+		}
+		echo "</tr>";
+	}
+
+	echo "</table>";
+
 }
