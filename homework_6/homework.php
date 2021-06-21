@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-    <table>
+    <table border="1">
       <?php
         for ($i = 1; $i < 11; $i++) {
             echo "<tr>";
