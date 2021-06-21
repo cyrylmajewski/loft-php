@@ -1,18 +1,16 @@
 <?php
 
-function task1(array $strings, $allInOne = false)
+function task1(array $strings, $return = true)
 {
-	$newString = '';
-	if ($allInOne) {
-		foreach ($strings as $key => $value) {
-			$newString = $newString . " " . $value;
-		}
-	} else {
-		foreach ($strings as $key => $value) {
-			echo "<p> {$value} </p>";
-		}
+	$newString = implode("\n", array_map(function (string $str) {
+		return "<p>$str</p>";
+	}, $strings));
+
+	if ($return) {
+		return $newString;
 	}
-	return $newString;
+
+	echo $newString;
 }
 
 function task2(string $operation, ...$numbers)
