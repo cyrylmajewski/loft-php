@@ -70,5 +70,23 @@ function task3($cols, $rows)
 	}
 
 	echo "</table>";
+}
 
+function task4()
+{
+	echo date('Y-m-d H:i') . "</br>";
+	echo date('Y-m-d H:i:s', time());
+}
+
+function task5(string $sentence, string $word, string $change)
+{
+	return str_replace($word, $change, $sentence);
+}
+
+function task6(string $fileName, $fileContent)
+{
+	$file = fopen($fileName, 'w');
+	fputs($file, $fileContent);
+	var_dump(file_get_contents($fileName));
+	fclose($file);
 }

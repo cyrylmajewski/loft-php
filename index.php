@@ -3,4 +3,8 @@ include './src/functions.php';
 
 //echo task1(['one', 'two', 'three']);
 //task2('+', 1, 2, 3, 5.2);
-task3(3, 4);
+//task3(3, 4);
+//task4();
+//echo task5('Карл у Клары украл Кораллы', 'К', '');
+//echo task5('Две бутылки лимонада', 'Две', 'Три');
+//task6('test.txt', 'Hello again!');
