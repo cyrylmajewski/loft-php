@@ -29,11 +29,9 @@ $cars = [
 ];
 echo "<pre>";
 foreach ($cars as $key => $car) {
-    echo "CAR "; print_r($key); echo "</br>";
-    foreach ($car as $name => $value) {
-        print_r($value); echo " ";
-    }
-    echo "</br></br>";
+    echo "CAR $key </br>";
+    echo implode( ' ', $car);
+    echo "</br>";
 }
 
 echo "</pre>";
