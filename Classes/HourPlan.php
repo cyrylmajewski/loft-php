@@ -1,7 +1,6 @@
 <?php
 
 class HourPlan extends Plan {
-	protected $name = 'Почасовой';
 	protected $kmPrice = 0;
 	protected $hourPrice = 250;
 

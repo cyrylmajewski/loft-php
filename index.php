@@ -1,4 +1,8 @@
 <?php
+
+error_reporting(E_ALL);
+ini_set("display_errors","On");
+
 require_once('Interfaces/PlanInterface.php');
 require_once('Classes/Plan.php');
 require_once('Classes/BasePlan.php');
@@ -13,7 +17,6 @@ $student = new StudentPlan(4, 224);
 $student->addServices('driver', 'gps');
 $hour = new HourPlan(3, 60);
 $hour->addServices('driver');
-$base->showPrice();
-$student->showPrice();
-$hour->showPrice();
-
+echo "Цена базовая " . $base->countPrice() . "<br>";
+echo "Цена студенческая " . $student->countPrice() . "<br>";
+echo "Цена часовая " . $hour->countPrice() . "<br>";

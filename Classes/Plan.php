@@ -1,7 +1,6 @@
 <?php
 
 abstract class Plan implements iPlan {
-	protected $name;
 	protected $kmPrice;
 	protected $minutePrice;
 	protected $priceGPS = 15;
@@ -16,14 +15,12 @@ abstract class Plan implements iPlan {
 	}
 
 	public function countPrice(): int {
-		$price = 0;
-
-		$price += $this->km * $this->kmPrice + $this->minutes * $this->minutePrice + $this->countServices();
-		return $price;
+		return $this->km * $this->kmPrice + $this->minutes * $this->minutePrice + $this->countServices();
 	}
 
 	public function addServices(...$services) {
 		foreach ($services as $service) {
+
 			array_push($this->services, $service);
 		}
 	}
@@ -50,20 +47,5 @@ abstract class Plan implements iPlan {
 
 		return $price;
 	}
-
-	public function showPrice() {
-		echo "Тариф " . $this->name . "<br>";
-
-		foreach ($this->services as $service) {
-			if($service === 'gps') {
-				echo "- Добавлена услуга GPS<br>";
-			}
-
-			if($service === 'driver') {
-				echo "- Добавлена услуга дополнительного водителя<br>";
-			}
-		}
-
-		echo "Итоговая цена: " . $this->countPrice() . " рублей" . "<br><br>";
-	}
 }
+?>
