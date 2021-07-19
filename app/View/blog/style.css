@@ -1,0 +1,28 @@
+.messages {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.messages__container {
+    padding: 30px;
+}
+
+.messages__item {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.messages__item-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form {
+    margin-top: 100px;
+}
