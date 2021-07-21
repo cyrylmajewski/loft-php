@@ -8,9 +8,9 @@ use Base\Db;
 class Message extends BaseModel
 {
 
-	private string $message;
-	private string $date;
-	private int $userId;
+	public string $message;
+	public string $date;
+	public int $userId;
 
 	public function __construct(array $data = [])
 	{

@@ -2,7 +2,7 @@
     Блог польвателя: <?=$this->data['user']->name ?> <br>
     ID польвателя: <?=$this->data['user']->id ?> <br>
 
-    <?php if((!empty($_SESSION['id']) && $_GET['id'] == $_SESSION['id']) ): ?>
+    <?php if( $this->data['admin'] ): ?>
         <form class="form" method="post">
             <textarea name="message" id="message" cols="30" rows="10" required></textarea><br>
             <input type="submit" value="Отправить сообщение">
@@ -12,15 +12,17 @@
     <section class="messages">
         <h1>All messages: </h1>
         <div class="messages__container">
-            <div class="messages__item">
-                <div class="messages__item-info">
-                    <span>ID: <?=$this->data['user']->id ?></span>
-                    <span>2017-08-27</span>
+            <?php foreach ($this->data['messages'] as $message): ?>
+                <div class="messages__item">
+                    <div class="messages__item-info">
+                        <span>ID: <?=$this->data['user']->id ?></span>
+                        <span><?=$message['date'] ?></span>
+                    </div>
+                    <p class="messages__item-content">
+                      <?=$message['message'] ?>
+                    </p>
                 </div>
-                <p class="messages__item-content">
-                    Message of userMessage of userMessage of userMessage of userMessage of userMessage of userMessage of userMessage of userMessage of userMessage of userMessage of user
-                </p>
-            </div>
+            <?php endforeach; ?>
         </div>
     </section>
 <?php else: ?>
