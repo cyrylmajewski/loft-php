@@ -1,6 +1,6 @@
 <?php
 // include composer autoload
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 
 // import the Intervention Image Manager Class
 use Intervention\Image\AbstractFont;
@@ -15,7 +15,7 @@ $img->resize(400, null, function (Constraint $constraint) {
 
 $img->text('New text with Open Sans', $img->getWidth() - 10, $img->getHeight() - 10, function (AbstractFont $font) {
 	$font->size(24);
-	$font->file('./opensans.ttf');
+	$font->file(__DIR__ . '/Roboto-Regular.ttf');
 	$font->color([2555, 255, 255, 0.4]);
 	$font->align('right');
 	$font->valign('bottom');
