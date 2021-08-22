@@ -16,11 +16,6 @@
         <label for="exampleInputPassword1">Repeat password</label>
         <input name="repeatPassword" type="password" class="form-control" id="exampleInputPasswordRepeat1" placeholder="Repeat password">
     </div>
-	<div class="checkbox">
-		<label>
-			<input type="checkbox"> Check me out
-		</label>
-	</div>
 	<button type="submit" class="btn btn-default">Submit</button>
 </form>
-<span>Уже есть профиль <a href="/login">Войти в профиль</a></span>
+<span>Already registered? <a href="/login">Log in</a></span>

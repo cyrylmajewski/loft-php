@@ -55,6 +55,7 @@ class BlogController extends BaseController
 			'admin' => $this->userIsAdmin,
 			'messages' => $this->messages
 		]);
+
 		if(!empty($_POST)) {
 			$this->messageController->sendMessage($user->getID(), $_POST);
 			$this->redirect('/blog?id=' . $user->getID());

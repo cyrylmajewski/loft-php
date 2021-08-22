@@ -34,18 +34,18 @@ class RegisterController extends BaseController
 
 		if (isset($name)) {
 			if(strlen($name) < 1) {
-				echo "<br><br>Имя не может быть пустым";
+				echo "<br><br>The field cannot be empty";
 				$success = false;
 			}
 
 			if(strlen($password) < 4) {
-				echo "<br><br>Введите больше 4 знаков пароля";
+				echo "<br><br>Enter more than 4 characters of the password";
 				$success = false;
 			}
 
 			$user = User::getByMail($email);
 			if(isset($user)) {
-				echo "<br><br>Пользователь с такой почтой уже существует";
+				echo "<br><br>A user with such an email already exists";
 				$success = false;
 			}
 		}

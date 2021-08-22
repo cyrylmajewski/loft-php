@@ -152,12 +152,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "620c2a66c52f4f83746b736a8d1398f50376aa1f"
+                "reference": "a4548d7ebeae93fd5292f35e799499c11bfbadd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/620c2a66c52f4f83746b736a8d1398f50376aa1f",
-                "reference": "620c2a66c52f4f83746b736a8d1398f50376aa1f",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/a4548d7ebeae93fd5292f35e799499c11bfbadd8",
+                "reference": "a4548d7ebeae93fd5292f35e799499c11bfbadd8",
                 "shasum": ""
             },
             "require": {
@@ -218,7 +218,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-07-16T10:10:14+00:00"
+            "time": "2021-08-17T13:03:33+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -611,16 +611,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.23.0",
+            "version": "v1.23.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "2df51500adbaebdc4c38dea4c89a2e131c45c8a1"
+                "reference": "9174a3d80210dca8daa7f31fec659150bbeabfc6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/2df51500adbaebdc4c38dea4c89a2e131c45c8a1",
-                "reference": "2df51500adbaebdc4c38dea4c89a2e131c45c8a1",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/9174a3d80210dca8daa7f31fec659150bbeabfc6",
+                "reference": "9174a3d80210dca8daa7f31fec659150bbeabfc6",
                 "shasum": ""
             },
             "require": {
@@ -684,7 +684,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-27T09:27:20+00:00"
+            "time": "2021-05-27T12:26:48+00:00"
         },
         {
             "name": "symfony/polyfill-php72",

@@ -3,6 +3,7 @@
 namespace Base;
 
 use Base\View;
+
 class Router
 {
 	const NAMESPACE = '\\App\\Controller\\';

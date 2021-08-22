@@ -1,11 +1,11 @@
 <?php if(isset($this->data['user'])): ?>
-    Блог польвателя: <?=$this->data['user']->name ?> <br>
-    ID польвателя: <?=$this->data['user']->id ?> <br>
+    Username: <?=$this->data['user']->name ?> <br>
+    User ID: <?=$this->data['user']->id ?> <br>
 
     <?php if( $this->data['admin'] ): ?>
         <form class="form" method="post">
             <textarea name="message" id="message" cols="30" rows="10" required></textarea><br>
-            <input type="submit" value="Отправить сообщение">
+            <input type="submit" value="Send message">
         </form>
     <?php endif; ?>
 
@@ -25,8 +25,30 @@
             <?php endforeach; ?>
         </div>
     </section>
+
+<!--    <aside class="side-menu">-->
+<!--        <h2>Other blogs</h2>-->
+<!---->
+<!--        <ul>-->
+<!--            <li>-->
+<!--                <a href="#">User 1</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="#">User 2</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="#">User 3</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="#">User 4</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="#">User 5</a>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </aside>-->
 <?php else: ?>
-	Такого пользователя не существует: <a href="/blog">Перейти в свой блог</a>
+    This user doesn't exist: <a href="/blog">Go to your blog</a>
 <?php endif; ?>
 
 <style>
